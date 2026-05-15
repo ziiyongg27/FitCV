@@ -43,3 +43,18 @@ Ensure you have **Node.js** (v18 or higher recommended) and **npm** installed on
 4. **View the Application**:
 Once the server boots up, Vite will display a local server link in your terminal.
 Simply Ctrl + Click the link (usually http://localhost:5173) or copy and paste it into your web browser.
+
+---
+
+## Author
+
+**Michael Lee**  
+
+Computer Science Student (AI Field)  
+
+Interested in:
+
+- Software Development
+- Frontend Engineering
+- Technology Innovation
+
