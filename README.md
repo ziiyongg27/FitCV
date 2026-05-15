@@ -1,73 +1,45 @@
-# React + TypeScript + Vite
+# FitCV - AI Resume Gap Analyzer 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Submission for the Shortcut Asia Internship Challenge 2026**
 
-Currently, two official plugins are available:
+FitCV is a smart, frontend-focused web application designed to help candidates align their skills with their dream roles. By analyzing a user's resume against a target Job Description (JD), FitCV highlights validated skills, exposes missing requirements, and provides actionable strategic advice.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠 Tech Stack
 
-## React Compiler
+* **Frontend Framework:** React (initialized via Vite for speed and optimized builds)
+* **Language:** TypeScript (for strict data typing and enterprise-level reliability)
+* **Styling:** Tailwind CSS (for a clean, responsive, and commercial-grade UI/UX)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Key Features & Architecture
 
-## Expanding the ESLint configuration
+* **Defensive UI/UX:** The interface utilizes React state management to prevent invalid API calls (e.g., the analyze button remains disabled until both text areas are populated).
+* **Visual Data Parsing:** Transforms complex AI text outputs into highly digestible, color-coded visual cues (Green for matches, Red for gaps).
+* **Mocked Data Strategy (Hackathon approach):** Given the shortened 1-week build period, the AI analysis engine currently utilizes a mocked JSON payload to guarantee a flawless, testable demonstration of the user flow and component architecture. The system defines a strict `MatchResult` TypeScript interface, making it 100% ready to plug into a real LLM endpoint (like Gemini or OpenAI API) with zero frontend structural changes.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 💻 How to Run the Project Locally
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Follow these steps to get the FitCV development server running on your machine.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Prerequisites
+Ensure you have **Node.js** (v18 or higher recommended) and **npm** installed on your computer.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Step-by-Step Setup
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. **Open your terminal** and navigate into the project folder (if you just cloned the repository):
+   ```bash
+   cd fitcv
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+2. **Install all dependencies**:
+    Run the following command to download React, TypeScript, Tailwind CSS, and other required packages.
+    ```bash
+    npm install
+
+3. **Start the development server**:
+    ```bash
+    npm run dev
+
+4. **View the Application**:
+Once the server boots up, Vite will display a local server link in your terminal.
+Simply Ctrl + Click the link (usually http://localhost:5173) or copy and paste it into your web browser.
